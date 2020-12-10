@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema\\Cinema.csproj": {}
+    "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema.csproj": {}
   },
   "projects": {
-    "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema\\Cinema.csproj": {
+    "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema\\Cinema.csproj",
+        "projectUniqueName": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema.csproj",
         "projectName": "Cinema",
-        "projectPath": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema\\Cinema.csproj",
+        "projectPath": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema\\obj\\",
+        "outputPath": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

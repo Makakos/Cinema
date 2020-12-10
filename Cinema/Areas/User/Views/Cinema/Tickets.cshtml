@@ -1,0 +1,32 @@
+﻿@model User
+@{
+    string strTitle = "Tickets";
+    ViewBag.Title = strTitle;
+}
+
+<div>
+    <h2>Your tickets,@Model.UserName</h2>
+    <div>
+
+        @if (Model.Tickets != null)
+        {
+          
+             @foreach (var ticket in Model.Tickets)
+              {
+
+                <form class="p-2 form-group border border-warning rounded bg-warning col-3 " style="display: inline-block;">
+                    <a class="text-light" asp-area="User" asp-controller="Goals" asp-action="Index" asp-route-id="@Model.Id">
+                        <h5 style="display:inline"> @($"{ticket.Title}")</h5>
+                    </a>
+
+                </form>
+              }
+             <br />
+                      
+        }
+    </div>
+
+
+</div>
+
+

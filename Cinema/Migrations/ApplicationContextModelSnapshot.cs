@@ -38,6 +38,9 @@ namespace Cinema.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PosterImagePath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("Rate")
                         .HasColumnType("float");
 
@@ -180,13 +183,13 @@ namespace Cinema.Migrations
                         {
                             Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "b3ca2dd0-ea13-464b-91c0-6d33d2af7417",
+                            ConcurrencyStamp = "f0f8a91d-bf1d-4ec4-994b-1778bc4fa5d4",
                             Email = "maximgaber65@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MAXIMGABER65@GMAIL.COM",
                             NormalizedUserName = "MAKAKOS",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEqioOhP6megkm3TXnlLQi2ZRGE2kGeBxjk4IKRbl/iGwQYlQosg7mys+2K3G6x+RQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN6QTrJjUyrZoAs0U9ND2V48YtBPQsjorj0llNCiHDQmoD/R9GiUHbkUKFTd9YGVmQ==",
                             PhoneNumber = "+380974675806",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
@@ -226,7 +229,7 @@ namespace Cinema.Migrations
                         new
                         {
                             Id = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
-                            ConcurrencyStamp = "b556356c-c17e-48f4-bbf4-1aa7fe9ac92b",
+                            ConcurrencyStamp = "c589973b-bea0-4426-a600-0419479a5d29",
                             Name = "User",
                             NormalizedName = "USER"
                         });

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CmtKFe7I8fMLhO5pgnetFixTaXiqrucm4L4jD6j1rUJHGUrIwsK2nbRvqvUoKB/b1M6dg+Dysw6uGcdPuGJhNw==",
+  "dgSpecHash": "qGzhDlZtPEme+ivZani5l+B99et0mpPBZ+k72MWE5nsMB9UdZ+Zzs4biAhJKnm8hH6R5l2R87E+1m5nSRfvIsQ==",
   "success": true,
-  "projectFilePath": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema\\Cinema.csproj",
+  "projectFilePath": "D:\\Универ\\C#\\ASP.NET\\Cinema\\Cinema\\Cinema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.1\\microsoft.aspnetcore.cryptography.internal.5.0.1.nupkg.sha512",

@@ -1,0 +1,41 @@
+﻿@model DataManager
+@{
+    string strTitle = "Your tasks";
+    ViewBag.Title = strTitle;
+}
+
+<div>
+    <h2>Films in Cinema</h2>
+    <div>
+        @if (Model.filmsRepository.GetFilms() != null)
+        {
+            @foreach (var film in Model.filmsRepository.GetFilms())
+            {
+
+                    <form class="p-2 form-group  border-warning rounded bg-warning col-3 " style="display: inline-block;">
+                        <div>
+                        <img width="100%" style=" background-size: cover" src="~/images/@film.PosterImagePath" />
+                        </div>
+                        <div>
+                            <a class="text-light"  asp-area="" asp-controller="Cinema" asp-action="Film" asp-route-id="@film.Id">
+                                <h3 style="display:block"> @($"{film.Name}")</h3>
+                            </a>
+                            <a class="text-light">
+                                <h4 style="display:block"> @($"{film.Rate} IMDB")</h4>
+                            </a>
+                            <a class="text-light">
+                                <h5 style="display:block"> @($"{film.Time}")</h5>
+                            </a>
+                            <a class="text-light">
+                                <h5 style="display:block"> @($"{film.DirectorName} {film.DirectorLastName}")</h5>
+                            </a>
+                        </div>
+                    </form>
+             }
+         }
+    </div>
+
+
+</div>
+
+

@@ -9,6 +9,7 @@ using Cinema.Models;
 
 namespace Cinema.Controllers
 {
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -22,7 +23,7 @@ namespace Cinema.Controllers
         {
             return View();
         }
-
+       
         public IActionResult Privacy()
         {
             return View();

@@ -23,7 +23,7 @@ namespace Cinema.Repositories.EntityFramework
 
         public Film GetFilmById(int id)
         {
-            return applicationContext.Films.FirstOrDefault(x => x.Id == id);
+            return applicationContext.Films.Include(x=>x.Sessions).FirstOrDefault(x => x.Id == id);
         }
 
         public void SaveFilm(Film entity)

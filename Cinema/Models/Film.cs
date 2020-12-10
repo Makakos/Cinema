@@ -21,6 +21,8 @@ namespace Cinema.Models
 
         public string DirectorLastName { get; set; }
 
+        public string PosterImagePath { get; set; }
+
         public List<Session> Sessions { get; set; }
     }
 }

@@ -110,3 +110,10 @@ body {
     overflow-y: auto;
     margin-right: 5px;
 }
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,76 @@
+﻿@model Film
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+
+
+<div>
+    <h1>@Model.Name</h1>
+
+    <img class="img-block centered" src="~/images/@Model.PosterImagePath" />
+    <br />
+    <div>
+        <a class="text-secondary">
+            <h5 style="display:block">Film name:</h5>
+        </a>
+        <a class="text-dark">
+            <h4 style="display:block"> @($"{Model.Name}")</h4>
+        </a>
+
+        <a class="text-secondary">
+            <h5 style="display:block"> Rate:</h5>
+        </a>
+        <a class="text-dark">
+            <h4 style="display:block"> @($"{Model.Rate} IMDB")</h4>
+        </a>
+
+        <a class="text-secondary">
+            <h5 style="display:block"> Runtime:</h5>
+        </a>
+        <a class="text-dark">
+            <h4 style="display:block"> @($"{Model.Time}")</h4>
+        </a>
+
+        <a class="text-secondary">
+            <h5 style="display:block"> Film director:</h5>
+        </a>
+        <a class="text-dark">
+            <h4 style="display:block"> @($"{Model.DirectorName} {Model.DirectorLastName}")</h4>
+        </a>
+    </div>
+
+    <h4 style="display:block" class="text-light bg-dark" bg-dark> Sessions:</h4>
+    @if (Model.Sessions != null)
+    {
+        @foreach (var group in Model.Sessions.OrderBy(x=>x.Date).GroupBy(x => x.Date.Date))
+        {
+           
+            <h4 style="display:block"> @($"{group.Key.ToString("dd/MM")} {group.Key.DayOfWeek}")</h4>
+            @foreach (Session session in group)
+            {
+                <form class="p-2 form-group  border-warning rounded bg-warning col-3 " style="display: inline-block;">
+                    <div>
+                        <a class="text-light" asp-area="" asp-controller="Cinema" asp-action="Session" asp-route-id="@session.Id">
+                            <h5 style="display:block"> @($"Time:{session.Date.TimeOfDay}")</h5>
+                        </a>
+                        <a class="text-light">
+                            <h5 style="display:block"> @($"Hall:{session.Hall}")</h5>
+                        </a>
+
+                    </div>
+                </form>
+             }
+         }
+    }
+    else
+    {
+        <h5 style="display:block"> Unfortunately there are no sessions for this film</h5>
+    }
+
+
+</div>
+<div>
+    <a class="btn btn-primary" asp-controller="Cinema" asp-action="Films">Back to films list</a>
+</div>
