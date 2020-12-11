@@ -8,7 +8,7 @@ namespace Cinema.Models
 {
     public class User : IdentityUser
     {
-        public int Year { get; set; }
+        public int Years { get; set; }
 
        
         public List<Ticket> Tickets { get; set; }

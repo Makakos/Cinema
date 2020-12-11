@@ -23,7 +23,7 @@ namespace Cinema.Repositories.EntityFramework
 
         public Session GetSessionById(int id)
         {
-            return applicationContext.Sessions.FirstOrDefault(x => x.Id == id);
+            return applicationContext.Sessions.Include(x=>x.Tickets).FirstOrDefault(x => x.Id == id);
         }
 
         public void SaveSession(Session entity)

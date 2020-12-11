@@ -25,5 +25,12 @@ namespace Cinema.Controllers
             Film film = dataManager.filmsRepository.GetFilmById(id);
             return View(film);
         }
+
+        public IActionResult Session(int id)
+        {
+            
+            Session session = dataManager.sessionsRepository.GetSessionById(id);
+            return View(session);
+        }
     }
 }

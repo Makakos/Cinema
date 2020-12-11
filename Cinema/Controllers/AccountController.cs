@@ -34,7 +34,7 @@ namespace Cinema.Controllers
             if (ModelState.IsValid)
             {
 
-                User user = new User { UserName = (model.Name == null ? model.Email : model.Name), Year = model.Year, Email = model.Email, PhoneNumber = model.PhoneNumber };
+                User user = new User { UserName = (model.Name == null ? model.Email : model.Name), Years = model.Year, Email = model.Email, PhoneNumber = model.PhoneNumber };
                 var result = await userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

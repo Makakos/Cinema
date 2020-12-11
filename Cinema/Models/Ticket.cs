@@ -11,18 +11,14 @@ namespace Cinema.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Cost")]
-        public string Cost { get; set; }
+        [Display(Name = "Price")]
+        public string Price { get; set; }
 
         [Display(Name = "Row")]
         public string Row { get; set; }
 
         [Display(Name = "Place")]
         public string Place { get; set; }
-
-        [Required]
-        [Display(Name = "Task")]
-        public string Title { get; set; }
 
         public string UserId { get; set; }
         public User User { get; set; }

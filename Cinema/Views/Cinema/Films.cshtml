@@ -1,11 +1,11 @@
 ﻿@model DataManager
 @{
-    string strTitle = "Your tasks";
+    string strTitle = "Films";
     ViewBag.Title = strTitle;
 }
 
 <div>
-    <h2>Films in Cinema</h2>
+    <h2>Films in the Cinema</h2>
     <div>
         @if (Model.filmsRepository.GetFilms() != null)
         {
@@ -24,7 +24,7 @@
                                 <h4 style="display:block"> @($"{film.Rate} IMDB")</h4>
                             </a>
                             <a class="text-light">
-                                <h5 style="display:block"> @($"{film.Time}")</h5>
+                                <h5 style="display:block"> @($"{film.Runtime}")</h5>
                             </a>
                             <a class="text-light">
                                 <h5 style="display:block"> @($"{film.DirectorName} {film.DirectorLastName}")</h5>

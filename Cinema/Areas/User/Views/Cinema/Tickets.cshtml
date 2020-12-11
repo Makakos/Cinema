@@ -1,28 +1,105 @@
-﻿@model User
+﻿@model List<Ticket>
 @{
     string strTitle = "Tickets";
     ViewBag.Title = strTitle;
 }
 
 <div>
-    <h2>Your tickets,@Model.UserName</h2>
     <div>
 
-        @if (Model.Tickets != null)
+        @if (Model != null)
         {
-          
-             @foreach (var ticket in Model.Tickets)
-              {
 
-                <form class="p-2 form-group border border-warning rounded bg-warning col-3 " style="display: inline-block;">
-                    <a class="text-light" asp-area="User" asp-controller="Goals" asp-action="Index" asp-route-id="@Model.Id">
-                        <h5 style="display:inline"> @($"{ticket.Title}")</h5>
-                    </a>
+            @foreach (Ticket ticket in Model.OrderBy(x=>x.Session.Date))
+            {
 
-                </form>
-              }
-             <br />
-                      
+                <div class="row ">
+                    <div class="col-sm-2 border-danger">
+                        <div class="row border-primary">
+                            <img height="250px" src="~/images/@ticket.Session.Film.PosterImagePath" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6 bg-primary">
+
+                        <div class="row align-self-center">
+                            <a class="text-light" asp-area="User" asp-controller="Cinema" asp-action="Ticket" asp-route-id="@ticket.Id">
+                                <h3 style="display:block"> @($"{ticket.Session.Film.Name}")</h3>
+                            </a>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <span class="text-dark">Date:</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="text-dark">Time:</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row align-self-center">
+                            <div class="col-sm-2">
+                                <a class="text-light" asp-area="User" asp-controller="Cinema" asp-action="Ticket" asp-route-id="@ticket.Id">
+                                    <h4 style="display:block">@($" {ticket.Session.Date.Day} {ticket.Session.Date.ToString("MMM")} ")</h4>
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="text-light asp-area="User" asp-controller="Cinema" asp-action="Ticket" asp-route-id="@ticket.Id">
+                                    <h4 style="display:block"> @($"{ticket.Session.Date.TimeOfDay}")</h4>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <span class="text-dark">Hall:</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="text-dark">Raw:</span>
+                            </div>
+                            <div class="col-sm-2">
+                                <span class="text-dark">Place:</span>
+                            </div>
+
+                        </div>
+                        <div class="row align-self-center">
+                            <div class="col-sm-2">
+                                <a class="text-light" asp-area="User" asp-controller="Cinema" asp-action="Ticket" asp-route-id="@ticket.Id">
+                                    <h4 style="display:block"> @($"{ticket.Session.Hall}")</h4>
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="text-light" asp-area="User" asp-controller="Cinema" asp-action="Ticket" asp-route-id="@ticket.Id">
+                                    <h4 style="display:block">@($" {ticket.Row}")</h4>
+                                </a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a class="text-light asp-area="User" asp-controller="Cinema" asp-action="Ticket" asp-route-id="@ticket.Id">
+                                    <h4 style="display:block"> @($"{ticket.Place}")</h4>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+            }
+
+
+
+
+
+
+
+
+
         }
     </div>
 

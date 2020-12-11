@@ -224,3 +224,5 @@ D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Acc
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Account\Registration.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Cinema\Films.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Cinema\Film.cshtml.g.cs
+D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Cinema\Session.cshtml.g.cs
+D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\_ViewStart.cshtml.g.cs

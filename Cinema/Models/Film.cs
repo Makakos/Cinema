@@ -11,7 +11,7 @@ namespace Cinema.Models
 
         public string Name { get; set; }
 
-        public TimeSpan Time { get; set; }
+        public TimeSpan Runtime { get; set; }
 
         public string Description { get; set; }
 

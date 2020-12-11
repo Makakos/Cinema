@@ -9,11 +9,11 @@
 <div>
     <h1>@Model.Name</h1>
 
-    <img class="img-block centered" src="~/images/@Model.PosterImagePath" />
+    <img class="img-block " height="100%" src="~/images/@Model.PosterImagePath" />
     <br />
     <div>
         <a class="text-secondary">
-            <h5 style="display:block">Film name:</h5>
+            <h5 style="display:block">Film:</h5>
         </a>
         <a class="text-dark">
             <h4 style="display:block"> @($"{Model.Name}")</h4>
@@ -27,10 +27,17 @@
         </a>
 
         <a class="text-secondary">
+            <h5 style="display:block"> Description:</h5>
+        </a>
+        <a class="text-dark">
+            <h5 style="display:block"> @($"{Model.Description}")</h5>
+        </a>
+
+        <a class="text-secondary">
             <h5 style="display:block"> Runtime:</h5>
         </a>
         <a class="text-dark">
-            <h4 style="display:block"> @($"{Model.Time}")</h4>
+            <h4 style="display:block"> @($"{Model.Runtime}")</h4>
         </a>
 
         <a class="text-secondary">

@@ -24,14 +24,14 @@ namespace Cinema.Repositories.EntityFramework
         public List<Ticket> GetUserTickets(string id)
         {
             List<Ticket> result = new List<Ticket>();
-            foreach (var el in applicationContext.Tickets.Where(x => x.UserId == id))
+            foreach (var el in applicationContext.Tickets.Include(x => x.Session).ThenInclude(x => x.Film).Where(x => x.UserId == id))
                 result.Add(el);
             return result;
         }
 
         public Ticket GetTicketById(int id)
         {
-            return applicationContext.Tickets.FirstOrDefault(x => x.Id == id);
+            return applicationContext.Tickets.Include(x=>x.Session).ThenInclude(x=>x.Film).FirstOrDefault(x => x.Id == id);
         }
 
         public void SaveTicket(Ticket entity)

@@ -22,7 +22,7 @@ namespace Cinema.Repositories.EntityFramework
         }
         public User GetUserById(string id)
         {
-            return applicationContext.Users.FirstOrDefault(x => x.Id == id);
+            return applicationContext.Users.Include(x=>x.Tickets).FirstOrDefault(x => x.Id == id);
         }
 
 
