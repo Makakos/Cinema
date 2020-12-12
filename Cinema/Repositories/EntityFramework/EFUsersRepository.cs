@@ -28,6 +28,7 @@ namespace Cinema.Repositories.EntityFramework
 
         public void SaveUser(User entity)
         {
+          
             if (entity.Id == default)
                 applicationContext.Entry(entity).State = EntityState.Added;
             else

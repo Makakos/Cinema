@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Cinema.Models;
 using Cinema.Models.ViewModels;
@@ -19,6 +20,14 @@ namespace Cinema.Controllers
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+        }
+
+        public IActionResult Index()
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            User user = userManager.Users.FirstOrDefault(x=>x.Id==userId);
+            ViewBag.Name = user.UserName;
+            return View();
         }
 
         [HttpGet]

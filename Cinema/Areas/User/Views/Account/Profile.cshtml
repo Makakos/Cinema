@@ -1,0 +1,35 @@
+﻿@model Cinema.Models.User
+
+
+<form method="post" asp-area"User" asp-controller="Account" asp-action="Profile" asp-route-returnUrl="@ViewBag.ReturnUrl">
+    <p><strong>Name</strong></p>
+    <p><input asp-for="UserName" maxlength="25" size="40" value="@Model.UserName"></p>
+
+    <p><strong>Phone</strong></p>
+    <p>
+        <input asp-for="PhoneNumber" maxlength="25" size="40" value="@Model.PhoneNumber">
+        @if (Model.PhoneNumberConfirmed)
+        {
+            <span>&#10004;</span>
+        }
+    </p>
+
+
+    <p><strong>Email</strong></p>
+    <p>
+        <input asp-for="Email" maxlength="25" size="40" value="@Model.Email">
+        @if (Model.EmailConfirmed)
+        {
+            <span>&#10004;</span>
+        }
+    </p>
+
+
+    <div>
+        <input class="btn btn-primary" type="submit" value="Save changes" />
+    </div>
+    <br />
+    <div>
+        <a class="btn btn-danger" asp-area="User" asp-controller="Account" asp-action="Logout">Log out</a>
+    </div>
+</form>

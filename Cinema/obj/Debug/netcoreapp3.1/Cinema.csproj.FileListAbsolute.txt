@@ -218,11 +218,12 @@ D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Cinema.pdb
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Cinema.genruntimeconfig.cache
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Shared\FooterPartial.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Shared\HeaderPartial.cshtml.g.cs
-D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Cinema\Tickets.cshtml.g.cs
-D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\_ViewImports.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Account\Registration.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Cinema\Films.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Cinema\Film.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Views\Cinema\Session.cshtml.g.cs
+D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Account\Profile.cshtml.g.cs
+D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Account\Tickets.cshtml.g.cs
+D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\_ViewImports.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\_ViewStart.cshtml.g.cs
