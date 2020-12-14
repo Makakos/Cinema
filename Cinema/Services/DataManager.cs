@@ -20,5 +20,10 @@ namespace Cinema.Services
             sessionsRepository = sessions;
             filmsRepository = films;
         }
+
+        public DataManager()
+        {
+           
+        }
     }
 }

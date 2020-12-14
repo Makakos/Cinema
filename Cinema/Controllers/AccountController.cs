@@ -9,10 +9,14 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
+
+
 namespace Cinema.Controllers
 {
+   
     public class AccountController : Controller
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(AccountController));
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
 
@@ -22,17 +26,12 @@ namespace Cinema.Controllers
             this.signInManager = signInManager;
         }
 
-        public IActionResult Index()
-        {
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            User user = userManager.Users.FirstOrDefault(x=>x.Id==userId);
-            ViewBag.Name = user.UserName;
-            return View();
-        }
+       
 
         [HttpGet]
         public IActionResult Registration()
         {
+            log.Info("Registration started");
             return View(new RegistrationViewModel());
         }
 
@@ -49,7 +48,7 @@ namespace Cinema.Controllers
                 {
 
                     await userManager.AddToRoleAsync(user, "User");
-
+                    log.Info("User was registrated");
                     await signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "Home");
                 }
@@ -57,6 +56,7 @@ namespace Cinema.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
+                        log.Error(error.Description);
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
                 }
@@ -69,6 +69,7 @@ namespace Cinema.Controllers
         public IActionResult Login(string returnUrl)
         {
             ViewBag.ReturnURL = returnUrl;
+            log.Info("Loggin started");
             return View(new LoginViewModel());
         }
 
@@ -84,9 +85,11 @@ namespace Cinema.Controllers
                     var result = await signInManager.PasswordSignInAsync(user.UserName, model.Password, true, false);
                     if (result.Succeeded)
                     {
+                        log.Info("User successfuly logged in");
                         return Redirect(returnUrl ?? "/");
                     }
                 }
+                log.Error("User entered wrong login or password");
                 ModelState.AddModelError(nameof(LoginViewModel), "Неверный логин или пароль");
             }
             return View(model);
@@ -98,6 +101,7 @@ namespace Cinema.Controllers
         public IActionResult Logout()
         {
             signInManager.SignOutAsync();
+            log.Info("User logged out");
             return RedirectToAction("Index", "Home");
         }
 

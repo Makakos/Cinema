@@ -1,0 +1,19 @@
+00:42:16,563 [4] INFO Cinema.Controllers.HomeController - Home page was viewed
+00:42:18,687 [4] INFO Cinema.Controllers.CinemaController - Films page was viewed
+00:42:35,584 [4] INFO Cinema.Controllers.CinemaController - Inception film page was viewed
+00:42:42,897 [4] INFO Cinema.Controllers.CinemaController - Session in 1 for 14.12.2020 14:30:00 was viewed
+00:42:46,066 [4] INFO Cinema.Areas.UserArea.Controllers.AccountController - User watched his tickets
+00:42:54,381 [4] INFO Cinema.Areas.UserArea.Controllers.AccountController - User downloaded ticket for the film Catch me if you can on 13дек
+00:43:01,451 [4] INFO Cinema.Areas.UserArea.Controllers.AccountController - User viewed his profile page
+00:43:05,364 [4] INFO Cinema.Areas.UserArea.Controllers.AccountController - User logged out
+00:43:07,969 [12] INFO Cinema.Controllers.AccountController - Loggin started
+00:43:17,529 [4] INFO Cinema.Controllers.AccountController - User successfuly logged in
+00:43:17,549 [4] INFO Cinema.Areas.UserArea.Controllers.AccountController - User viewed his profile page
+00:43:19,521 [17] INFO Cinema.Controllers.HomeController - Home page was viewed
+00:48:38,196 [4] INFO Cinema.Controllers.HomeController WindowsIdentity.GetCurrent().Name - Home page was viewed
+00:48:40,395 [11] INFO Cinema.Controllers.CinemaController WindowsIdentity.GetCurrent().Name - Films page was viewed
+00:49:59,236 [5] INFO Cinema.Controllers.HomeController [User=WindowsIdentity.GetCurrent().Name] - Home page was viewed
+20:26:49,088 [4] INFO Cinema.Controllers.HomeController [User=WindowsIdentity.GetCurrent().Name] - Home page was viewed
+20:26:52,364 [4] INFO Cinema.Controllers.CinemaController [User=WindowsIdentity.GetCurrent().Name] - Films page was viewed
+20:26:55,230 [11] INFO Cinema.Controllers.CinemaController [User=WindowsIdentity.GetCurrent().Name] - Catch me if you can film page was viewed
+20:27:27,264 [5] INFO Cinema.Controllers.HomeController [User=WindowsIdentity.GetCurrent().Name] - Home page was viewed
