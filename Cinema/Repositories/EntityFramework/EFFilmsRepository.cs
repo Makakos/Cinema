@@ -1,51 +1,63 @@
 ﻿using Cinema.Models;
 using Cinema.Repositories.Abstruct;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Cinema.Repositories.EntityFramework
 {
     public class EFFilmsRepository:IFilmsRepository
     {
+        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(EFFilmsRepository));
         private readonly ApplicationContext applicationContext;
+
         public EFFilmsRepository(ApplicationContext context)
         {
-            applicationContext = context;
+            this.applicationContext = context;
         }
 
         public IQueryable<Film> GetFilms()
         {
-            return applicationContext.Films;
+            try
+            {
+                return this.applicationContext.Films;
+            }
+            catch (SqlException ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
         }
 
         public Film GetFilmById(int id)
         {
-            return applicationContext.Films.Include(x=>x.Sessions).FirstOrDefault(x => x.Id == id);
+            return this.applicationContext.Films.Include(x=>x.Sessions).FirstOrDefault(x => x.Id == id);
         }
 
         public void SaveFilm(Film entity)
         {
             if (entity.Id == default)
-                applicationContext.Entry(entity).State = EntityState.Added;
+            {
+                this.applicationContext.Entry(entity).State = EntityState.Added;
+            }
             else
-                applicationContext.Entry(entity).State = EntityState.Modified;
-            applicationContext.SaveChanges();
+            {
+                this.applicationContext.Entry(entity).State = EntityState.Modified;
+            }
+
+            this.applicationContext.SaveChanges();
         }
 
         public void DeleteFilmById(int id)
         {
-            applicationContext.Films.Remove(new Film { Id = id });
-            applicationContext.SaveChanges();
+            this.applicationContext.Films.Remove(new Film { Id = id });
+            this.applicationContext.SaveChanges();
         }
 
         public void DeleteFilm(Film goal)
         {
-            applicationContext.Entry(goal).State = EntityState.Deleted;
-            applicationContext.SaveChanges();
+            this.applicationContext.Entry(goal).State = EntityState.Deleted;
+            this.applicationContext.SaveChanges();
         }
     }
 }
-

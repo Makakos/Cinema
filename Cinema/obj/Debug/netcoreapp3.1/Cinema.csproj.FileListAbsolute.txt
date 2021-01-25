@@ -225,12 +225,14 @@ D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\Use
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Account\Tickets.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\_ViewImports.cshtml.g.cs
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\_ViewStart.cshtml.g.cs
-D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\Django unchained_10дек_14h_30min_ticket.json
 D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\log4net.dll
 D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\log4net.config
+D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\libman.json
+D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\stylecop.json
+D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\StyleCop.dll
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Cinema.csproj.CoreCompileInputs.cache
 D:\Универ\C#\ASP.NET\Cinema\Cinema\obj\Debug\netcoreapp3.1\Cinema.MvcApplicationPartsAssemblyInfo.cache
-D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\log4net.config
-D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\Catch me if you can_13дек_16h_40min_ticket.json
+D:\Универ\C#\ASP.NET\Cinema\Cinema\bin\Debug\netcoreapp3.1\Django unchained_10дек_14h_30min_ticket.json

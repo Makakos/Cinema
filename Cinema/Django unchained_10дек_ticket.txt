@@ -1,7 +1,0 @@
-Film:Django unchained
-Date:10дек
-Time:14:30:00
-Row:3
-Place:15
-Hall:1
-Price:110

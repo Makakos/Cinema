@@ -159,6 +159,16 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "StyleCop": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            },
             "log4net": {
               "target": "Package",
               "version": "[2.0.12, )"

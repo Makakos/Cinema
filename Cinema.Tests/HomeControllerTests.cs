@@ -17,7 +17,6 @@ namespace Cinema.Tests
             ViewResult result = controller.Index() as ViewResult;
             
             // Assert
-            Assert.NotNull(result);
             Assert.Equal(null, result.ViewName);
         }
 
@@ -31,7 +30,6 @@ namespace Cinema.Tests
             ViewResult result = controller.Privacy() as ViewResult;
             
             // Assert
-            Assert.NotNull(result);
             Assert.Equal(null, result.ViewName);
         }
     }

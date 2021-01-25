@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using System.Threading.Tasks;
 
 namespace Cinema.Models
 {
@@ -26,7 +22,6 @@ namespace Cinema.Models
         [Display(Name = "Place")]
         public string Place { get; set; }
 
-       
         public string UserId { get; set; }
         public User User { get; set; }
 

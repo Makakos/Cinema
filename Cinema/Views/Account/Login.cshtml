@@ -14,17 +14,18 @@
         <span asp-validation-for="Password"></span>
     </div>
     <div>
-    <div>
-        <label asp-for="IsRemember"></label><br/>
-        <input asp-for="IsRemember" />
-    </div>
+        <div>
+            <label asp-for="IsRemember"></label><br />
+            <input asp-for="IsRemember" />
+        </div>
         <a asp-controller="Account" asp-action="PasswordRecovery">Forgot password?</a><br />
     </div>
     <div>
-        <input type="submit" value="Log in" /><br />
+        <input class="btn-primary" type="submit" value="Log in" />
     </div>
+    <br />
     <div>
-        <input asp-controller="Account" asp-action="Registration" type="submit" value="Create new account" />
+        <input class="btn-primary" asp-controller="Account" asp-action="Registration" type="submit" value="Create new account" />
     </div>
 </form>
 

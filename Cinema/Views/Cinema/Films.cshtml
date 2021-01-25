@@ -5,8 +5,8 @@
 }
 
 <div>
-    <h2>Films in the Cinema</h2>
-    <div>
+    <h2>Films in  @Config.ProjectName</h2>
+    <div width="100%";>
         @if (Model.filmsRepository.GetFilms() != null)
         {
             @foreach (var film in Model.filmsRepository.GetFilms())
@@ -14,7 +14,7 @@
 
                 <form class="p-2 form-group  border-warning rounded bg-warning col-3 " style="display: inline-block;">
                     <div>
-                        <img width="100%" style=" background-size: cover" src="~/images/@film.PosterImagePath" />
+                        <img width="100%" height="400px" style=" background-size: cover" src="~/images/@film.PosterImagePath" />
                     </div>
                     <div>
                         <a class="text-light" asp-area="" asp-controller="Cinema" asp-action="Film" asp-route-id="@film.Id">

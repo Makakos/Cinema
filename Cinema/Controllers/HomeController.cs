@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Cinema.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Cinema.Models;
+using System.Security.Claims;
 
 namespace Cinema.Controllers
 {
-   
+
     public class HomeController : Controller
     {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(HomeController));
+        private static readonly log4net.ILog Log = log4net.LogManager.GetLogger(typeof(HomeController));
+        private readonly DataManager dataManager;
+
+        public HomeController(DataManager manager)
+        {
+            this.dataManager = manager;
+        }
 
         public IActionResult Index()
         {
-            log.Info("Home page was viewed");
-            return View();
+            if (this.User.Identity.IsAuthenticated)
+            {
+                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var user = this.dataManager.usersRepository.GetUserById(userId);
+                this.ViewBag.UserName = user.UserName;
+            }
+
+            Log.Info("Home page was viewed");
+            return this.View();
         }
-       
+
         public IActionResult Privacy()
         {
-            log.Info("Privacy page was viewed");
-            return View();
+            Log.Info("Privacy page was viewed");
+            return this.View();
         }
 
     }

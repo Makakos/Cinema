@@ -1,11 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Cinema.Services;
-using Cinema.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.AspNetCore.Identity;
 
@@ -13,16 +7,18 @@ namespace Cinema.Models
 {
     public class ApplicationContext : IdentityDbContext<User>
     {
-        public DbSet<User> Users { get; set; }
+        public override DbSet<User> Users { get; set; }
+
         public DbSet<Ticket> Tickets { get; set; }
+
         public DbSet<Session> Sessions { get; set; }
+
         public DbSet<Film> Films { get; set; }
 
-        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
-
-      
-
-
+        public ApplicationContext(DbContextOptions<ApplicationContext> options)
+            : base(options)
+        {
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,7 +26,6 @@ namespace Cinema.Models
 
             modelBuilder.ApplyConfiguration(new TicketConfiguration());
             modelBuilder.ApplyConfiguration(new SessionConfiguration());
-
 
             modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
             {
@@ -52,19 +47,15 @@ namespace Cinema.Models
                 SecurityStamp = string.Empty
             });
 
-
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
             {
                 RoleId = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
                 UserId = "3b62472e-4f66-49fa-a20f-e7685b9565d8"
             });
 
-
         }
 
     }
-
-
 
     public class TicketConfiguration : IEntityTypeConfiguration<Ticket>
     {
